@@ -1,0 +1,1 @@
+const a: string = 'tor main khai ';
