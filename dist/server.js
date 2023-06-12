@@ -1,2 +1,2 @@
-"use strict";
-const a = 'tor main khai ';
+'use strict'
+const a = 'tor main khai '
