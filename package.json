@@ -8,10 +8,14 @@
     "lint:check": "eslint --ignore-path .eslintignore --ext .js,.ts .",
     "lint:fix": "eslint --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-prettier": "yarn lint:check && yarn prettier:check",
     "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
   "keywords": [],
-  "author": "",
+  "lint-staged": {
+    "src/**/*.js": "yarn lint-prettier"
+  },
+  "author": "Naimur",
   "license": "ISC",
   "devDependencies": {
     "eslint-config-prettier": "^8.8.0",
@@ -29,6 +33,7 @@
     "dotenv": "^16.1.4",
     "eslint": "^8.42.0",
     "express": "^4.18.2",
+    "lint-staged": "^13.2.2",
     "mongoose": "^7.2.3"
   }
 }
